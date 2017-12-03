@@ -158,7 +158,7 @@ static void tick_sched_handle(struct tick_sched *ts, struct pt_regs *regs)
 		ts->next_tick = 0;
 	}
 #endif
-	update_process_times(user_mode(regs));
+	update_root_process_times(regs);
 	profile_tick(CPU_PROFILING);
 }
 #endif
